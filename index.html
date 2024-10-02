@@ -1241,6 +1241,142 @@ a:hover {
 </button>
 
   </footer>
+ <style>
+    .wa__btn_popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .wa__btn_popup .wa__btn_popup_icon {
+      width: 50px;
+      height: 50px;
+      background-color: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    }
+
+    .wa__popup_chat_box {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      display: none;
+      z-index: 1000;
+      border-radius: 0.25rem;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    }
+
+    .wa__popup_chat_box .wa__popup_heading {
+      background-color: #28a745;
+      color: #f8f9fa;
+      padding: 1rem 1.5rem;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+
+    .wa__popup_chat_box .wa__popup_content {
+      
+      margin: 1.5rem;
+    }
+
+    .wa__popup_chat_box .wa__popup_content_item {
+      margin-bottom: 0.5rem;
+    }
+
+    .wa__popup_chat_box .wa__popup_avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .wa__popup_chat_box .wa__popup_txt {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    .wa__popup_chat_box .wa__popup_txt .wa__member_name {
+      font-weight: bold;
+    }
+
+    .wa__popup_chat_box .wa__popup_txt .wa__member_duty {
+      color: #6c757d;
+    }
+
+    .wa__popup_chat_box a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+
+  <div class="wa__btn_popup">
+    <div class="wa__btn_popup_icon">
+      <i class="fa fa-2x fa-comments"></i>
+    </div>
+  </div>
+
+  <div class="wa__popup_chat_box wa__pending wa__lauch">
+    <div class="wa__popup_heading">
+      <div class="fw-bold wa__popup_title">Start a Conversation</div>
+      <div class="small wa__popup_intro">
+        Hi! Click one of our members below to chat on <strong>)</strong>
+      </div>
+    </div>
+
+   <div class="wa__popup_content wa__popup_content_left">
+       <!--<div class="small text-secondary wa__popup_notice">
+        Tim kami biasanya membalas dalam hitungan menit
+      </div>-->
+
+      <div class="wa__popup_content_list">
+        <!-- Member 1 -->
+        <div class="wa__popup_content_item">
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=7838090428" class="rounded wa__stt wa__stt_online">
+            <div class="wa__popup_avatar" style="background-image: url('#');">
+            </div>
+            <div class="wa__popup_txt">
+              <div class="wa__member_name">Mr Y</div>
+              <div class="wa__member_duty">Customer Support</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="wa__popup_content_item">
+          <a target="_blank" href="https://web.whatsapp.com/send?phone=8797529661" class="rounded wa__stt wa__stt_online">
+            <div class="wa__popup_avatar" style="background-image: url('#');">
+            </div>
+            <div class="wa__popup_txt">
+              <div class="wa__member_name">Mr X</div>
+              <div class="wa__member_duty">Sale Support</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- /.wa__popup_content_list -->
+    </div>
+    <!-- /.wa__popup_content -->
+  </div>
+
+  <script>
+    document.querySelector('.wa__btn_popup').addEventListener('click', function() {
+      const chatBox = document.querySelector('.wa__popup_chat_box');
+      if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+        chatBox.style.display = 'block';
+      } else {
+        chatBox.style.display = 'none';
+      }
+    });
+  </script>
     </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
