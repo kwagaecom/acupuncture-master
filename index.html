@@ -83,63 +83,126 @@
 </div>
 </section>
 
-<nav class="navbar">
+<nav class="navbar navbar-expand-lg">
   <div class="container">
     <!-- Logo -->
-   
     <a href="#home" class="navbar-brand p-0">
-                            <h1 class="text-primary"><i class="fas fa-accupressure me-5"></i>ACUP</h1>
-                        </a>
+      <h1 class="text-primary">
+        <i class="fas fa-accupressure me-2"></i>ACUP
+      </h1>
+    </a>
+
     <!-- Mobile menu toggle button (three bars) -->
     <button id="navbar-toggle" class="navbar-toggler" type="button">
-      <span class="navbar-toggler-icon">&#9776;</span> <!-- Unicode for hamburger icon -->
+      <span class="navbar-toggler-icon">&#9776;</span>
     </button>
 
     <!-- Navbar links -->
-    <div id="navbar-menu" class="navbar-collapse">
-      <ul class="navbar-nav" align="center">
-       
-
-<div align= "btn-group d-flex flex-wrap justify-content-center"class="btn-group" role="group" aria-label="Basic mixed styles example">
-   <li class="nav-item"><a class="nav-link" href="#home"> <button type="button" class="btn-sm btn-danger">Home</button></a></li>
-<li class="nav-item"><a class="nav-link" href="#about"><button type="button" class="btn-sm btn-primary">About </button></a></li>
-<li class="nav-item"><a class="nav-link" href="#why-us"><button type="button" class="btn-sm btn-success">Why</button></a></li>
-<li class="nav-item"><a class="nav-link" href="#gallery"> <button type="button" class="btn-sm btn-info">Gallery</button></a></li>
-
-<li class="nav-item"><a class="nav-link" href="#services"> <button type="button" class="btn-sm btn-secondary">Services</button></a></li>
-<li class="nav-item"><a class="nav-link" href="#contact-section"><button type="button" class="btn-sm btn-light">Contact</button></a></li>
-
-<li class="nav-item"><a class="nav-link" href="#video"> <button type="button" class="btn-sm btn-secondary">Video</button></a></li>
-<li class="nav-item"><a class="nav-link" href="#faq"><button type="button" class="btn-sm btn-light">FAQ</button></a></li>
-                      
-
-  
-
-<li class="nav-item"><a class="nav-link" href="#reviews"><button type="button" class="btn-sm btn-dark">Reviews</button></a></li>
-
-</div>
-
-
-
+    <div id="navbar-menu" class="navbar-collapse collapse">
+      <ul class="navbar-nav d-flex flex-wrap justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">
+            <button type="button" class="btn btn-sm btn-danger">Home</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">
+            <button type="button" class="btn btn-sm btn-primary">About</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#why-us">
+            <button type="button" class="btn btn-sm btn-success">Why</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery">
+            <button type="button" class="btn btn-sm btn-info">Gallery</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">
+            <button type="button" class="btn btn-sm btn-secondary">Services</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact-section">
+            <button type="button" class="btn btn-sm btn-light">Contact</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#video">
+            <button type="button" class="btn btn-sm btn-secondary">Video</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#faq">
+            <button type="button" class="btn btn-sm btn-light">FAQ</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reviews">
+            <button type="button" class="btn btn-sm btn-dark">Reviews</button>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
-<style>
-.navbar {
-  background-color: #f8f9fa; /* Light background for the navbar */
-}
-
-.nav-item {
-  margin: 0px; /* Adds space between buttons */
-}
-
-.navbar-toggler {
-  border: none; /* Removes default border from toggle button */
-}
 
 <!-- JavaScript for toggling the menu on mobile -->
+<script>
+  document.getElementById('navbar-toggle').addEventListener('click', function () {
+    const navbarMenu = document.getElementById('navbar-menu');
+    navbarMenu.classList.toggle('collapse');
+  });
+</script>
+
+<style>
+  .navbar {
+    background-color: #f8f9fa;
+  }
+
+  .navbar-toggler {
+    border: none;
+    font-size: 1.5rem;
+  }
+
+  .nav-item {
+    margin: 5px;
+  }
+
+  .navbar-toggler-icon {
+    font-size: 24px;
+  }
+
+  @media (max-width: 768px) {
+    /* Stack buttons vertically on smaller screens */
+    #navbar-menu ul {
+      flex-direction: column;
+    }
+
+    .navbar-nav {
+      align-items: center; /* Centers the buttons */
+    }
+
+    .nav-link {
+      display: flex;
+      justify-content: center;
+      width: 100%; /* Make buttons take up full width */
+      margin-bottom: 10px; /* Adds some spacing between buttons */
+    }
+
+    .nav-item {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      width: 90%; /* Reduce button width for better fit */
+    }
+  }
 </style>
+
 <script>
   document.getElementById('navbar-toggle').addEventListener('click', function() {
     const menu = document.getElementById('navbar-menu');
