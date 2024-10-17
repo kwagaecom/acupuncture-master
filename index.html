@@ -3,7 +3,7 @@
 <html lang="en">
 
   <head>
-    <title>Accu&mdash; Pressure -Accupressure Service</title>
+    <title>Accu&mdash; Pressure- Accupressure Service</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -83,23 +83,21 @@
 </div>
 </section>
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <!-- Logo -->
-    <a href="#home" class="navbar-brand p-0">
-      <h1 class="text-primary">
-        <i class="fas fa-accupressure me-2"></i>ACUP
-      </h1>
-    </a>
-
+<nav class="navbar">
+  <div class="container-fluid">
     <!-- Mobile menu toggle button (three bars) -->
     <button id="navbar-toggle" class="navbar-toggler" type="button">
       <span class="navbar-toggler-icon">&#9776;</span>
     </button>
 
-    <!-- Navbar links -->
-    <div id="navbar-menu" class="navbar-collapse collapse">
-      <ul class="navbar-nav d-flex flex-wrap justify-content-center">
+    <!-- Side Menu -->
+    <div id="sidebar-menu" class="sidebar">
+      <a href="#home" class="sidebar-brand p-0">
+        <h1 class="text-primary">
+          <i class="fas fa-accupressure me-2"></i>ACUP
+        </h1>
+      </a>
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="#home">
             <span class="badge rounded-pill bg-danger">Home</span>
@@ -107,12 +105,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#about">
-             <span class="badge rounded-pill bg-dark">About</span>
+            <span class="badge rounded-pill bg-dark">About</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#why-us">
-        <span class="badge rounded-pill bg-warning">Why</span>
+            <span class="badge rounded-pill bg-warning">Why</span>
           </a>
         </li>
         <li class="nav-item">
@@ -137,12 +135,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#faq">
-              <span class="badge rounded-pill bg-danger">FAQ</span>
+            <span class="badge rounded-pill bg-danger">FAQ</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#reviews">
-              <span class="badge rounded-pill bg-dark">Reviews</span>
+            <span class="badge rounded-pill bg-dark">Reviews</span>
           </a>
         </li>
       </ul>
@@ -150,147 +148,71 @@
   </div>
 </nav>
 
-<!-- JavaScript for toggling the menu on mobile -->
+<!-- JavaScript for toggling the sidebar menu -->
 <script>
   document.getElementById('navbar-toggle').addEventListener('click', function () {
-    const navbarMenu = document.getElementById('navbar-menu');
-    navbarMenu.classList.toggle('collapse');
+    const sidebarMenu = document.getElementById('sidebar-menu');
+    sidebarMenu.classList.toggle('active');
   });
 </script>
 
+<!-- CSS for Side Menu -->
 <style>
-  .navbar {
+  /* Sidebar styling */
+  .sidebar {
+    position: fixed;
+    left: -250px; /* Hidden by default */
+    top: 0;
+    width: 250px;
+    height: 100%;
     background-color: #f8f9fa;
+    padding-top: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0; /* Slide in when active */
+  }
+
+  .sidebar .nav-item {
+    margin: 10px 0;
+  }
+
+  .sidebar .nav-link {
+    display: block;
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
   }
 
   .navbar-toggler {
     border: none;
     font-size: 1.5rem;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
   }
 
-  .nav-item {
-    margin: 5px;
-  }
-
-  .navbar-toggler-icon {
-    font-size: 24px;
-  }
-
+  /* Styling to adjust for mobile */
   @media (max-width: 768px) {
-    /* Stack buttons vertically on smaller screens */
-    #navbar-menu ul {
-      flex-direction: column;
+    .navbar-toggler-icon {
+      font-size: 24px;
     }
+  }
 
-    .navbar-nav {
-      align-items: center; /* Centers the buttons */
-    }
+  /* General page content styling */
+  .container-fluid {
+    padding-left: 260px; /* Adjust content to move aside when sidebar is open */
+  }
 
-    .nav-link {
-      display: flex;
-      justify-content: center;
-      width: 100%; /* Make buttons take up full width */
-      margin-bottom: 10px; /* Adds some spacing between buttons */
-    }
-
-    .nav-item {
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      width: 90%; /* Reduce button width for better fit */
-    }
+  /* When sidebar is hidden */
+  .sidebar.active + .container-fluid {
+    padding-left: 0;
   }
 </style>
 
-<script>
-  document.getElementById('navbar-toggle').addEventListener('click', function() {
-    const menu = document.getElementById('navbar-menu');
-    menu.classList.toggle('collapse');
-  });
-</script>
-
-<style>
-   .btn {
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px; /* Adjust the gap here */
-        }
-
-        .btn:last-child {
-            margin-right: 0; /* Remove margin for the last button */
-        }
-/* Basic Navbar styling */
-.navbar {
-  background-color: #f8f9fa;
-  padding: 1rem;
-}
-
-.navbar-toggler {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.navbar-collapse {
-  display: none; /* Hidden by default */
-  flex-direction: row; /* Ensure items are in a row */
-}
-
-.navbar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex; /* Display menu items horizontally */
-  flex-direction: row; /* Ensure items are arranged in a row */
-  gap: 1rem; /* Space between items */
-}
-
-.navbar-nav .nav-item {
-  margin: 0;
-}
-
-.navbar-nav .nav-link {
-  text-decoration: none;
-  color: #333;
-  padding: 0.5rem; /* Add some padding to menu items */
-}
-
-/* Show menu when open */
-.navbar-collapse.show {
-  display: flex; /* Ensure it's displayed as flexbox */
-  justify-content: center; /* Center the items */
-  flex-direction: row; /* Ensure horizontal display */
-}
-
-/* Media query for larger screens */
-@media (min-width: 992px) {
-  .navbar-collapse {
-    display: flex; /* Keep it horizontal for larger screens */
-    justify-content: flex-end; /* Align to the right */
-  }
-
-  .navbar-toggler {
-    display: none;
-  }
-}
-
-</style>
-<script>
-// JavaScript for toggling menu visibility
-document.getElementById('navbar-toggle').addEventListener('click', function() {
-  const navbarMenu = document.getElementById('navbar-menu');
-  
-  // Toggle the "show" class on the menu to display/hide it
-  navbarMenu.classList.toggle('show');
-});
-
-</script>
 
       
      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
