@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -25,7 +26,177 @@
 
   <body>
 
-    
+      <style>
+.social-share {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.social-share a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-share a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-share a svg {
+  width: 20px;
+  height: 20px;
+  fill: #555;
+  vertical-align: middle;
+}
+
+.social-share a.facebook svg {
+  fill: #3b5998;
+}
+
+.social-share a.whatsapp svg {
+  fill: #25d366;
+}
+
+.social-share a.pinterest svg {
+  fill: #bd081c;
+}
+
+.social-share a.linkedin svg {
+  fill: #0077b5;
+}
+
+@media only screen and (max-width: 600px) {
+  .social-share {
+    display: none;
+  }
+}
+
+/* Media Queries Shift Media Solutions| SMS */
+
+@media only screen and (max-width: 1080px) {
+  .body {
+    width: 100%;
+    overflow: auto;
+  }
+}
+
+  </style>
+
+
+  <div class="social-share">
+
+    <a href="https://www.facebook.com/profile.php?id=100083863996708" class="facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M20.05,0H3.95A3.952,3.952,0,0,0,0,3.95V20.05A3.952,3.952,0,0,0,3.95,24H12.63V14.71H9.62v-3H12.63v-1.5c0-3.6,2.2-5.55,5.38-5.55a28.475,28.475,0,0,1,3.18.16v3L18.79,9c-1.7,0-2,.81-2,1.95v1.5h4.05l-.53,3.05H16.8V24H20.05A3.952,3.952,0,0,0,24,20.05V3.95A3.952,3.952,0,0,0,20.05,0Z" />
+      </svg>
+    </a>
+
+   
+    <a href="https://in.pinterest.com/kwagaWDev/" class="pinterest"><svg viewBox="0 0 64 64">
+        <path d="M14.4,53.8c2.4,2,6.1,0.6,6.8-2.4l0-0.1c0.4-1.8,2.4-10.2,3.2-13.7c0.2-0.9,0.2-1.8-0.1-2.7 C24.2,34,24,32.8,24,31.5c0-4.1,2.4-7.2,5.4-7.2c2.5,0,3.8,1.9,3.8,4.2c0,2.6-1.6,6.4-2.5,9.9c-0.7,3,1.5,5.4,4.4,5.4 c5.3,0,8.9-6.8,8.9-14.9c0-6.1-4.1-10.7-11.6-10.7c-8.5,0-13.8,6.3-13.8,13.4c0,2.4,0.7,4.2,1.8,5.5c0.5,0.6,0.6,0.9,0.4,1.6 c-0.1,0.5-0.4,1.8-0.6,2.2c-0.2,0.7-0.8,1-1.4,0.7c-3.9-1.6-5.7-5.9-5.7-10.7c0-8,6.7-17.5,20-17.5c10.7,0,17.7,7.7,17.7,16 c0,11-6.1,19.2-15.1,19.2c-1.9,0-3.8-0.7-5.2-1.6c-0.9-0.6-2.1-0.1-2.4,0.9c-0.5,1.9-1.1,4.3-1.3,4.9c-0.1,0.5-0.3,0.9-0.4,1.4 c-1,2.7,0.9,5.5,3.7,5.7c2.1,0.1,4.2,0,6.3-0.3c12.4-2,22.1-12.2,23.4-24.7C61.5,18.1,48.4,4,32,4C16.5,4,4,16.5,4,32 C4,40.8,8.1,48.6,14.4,53.8z"></path>
+      </svg></a>
+
+    <a href="https://www.linkedin.com/in/kuldip-ray-311139179/99969-*+-++++
+" class="linkedin"><svg viewBox="0 0 64 64">
+        <path d="M8,54.7C8,55.4,8.6,56,9.3,56h9.3c0.7,0,1.3-0.6,1.3-1.3V23.9c0-0.7-0.6-1.3-1.3-1.3H9.3 c-0.7,0-1.3,0.6-1.3,1.3V54.7z"></path>
+        <path d="M46.6,22.3c-4.5,0-7.7,1.8-9.4,3.7c-0.4,0.4-1.1,0.1-1.1-0.5l0-1.6c0-0.7-0.6-1.3-1.3-1.3h-9.4 c-0.7,0-1.3,0.6-1.3,1.3c0.1,5.7,0,25.4,0,30.7c0,0.7,0.6,1.3,1.3,1.3h9.5c0.7,0,1.3-0.6,1.3-1.3V37.9c0-1,0-2,0.3-2.7 c0.8-2,2.6-4.1,5.7-4.1c4.1,0,6,3.1,6,7.6v15.9c0,0.7,0.6,1.3,1.3,1.3h9.3c0.7,0,1.3-0.6,1.3-1.3V37.4C60,27.1,54.1,22.3,46.6,22.3 z"></path>
+        <path d="M13.9,18.9L13.9,18.9c3.8,0,6.1-2.4,6.1-5.4C19.9,10.3,17.7,8,14,8c-3.7,0-6,2.3-6,5.4 C8,16.5,10.3,18.9,13.9,18.9z"></path>
+      </svg></a>
+
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js">
+var socialShareButtons = document.querySelectorAll(".social-share a");
+
+function shareOnFacebook() {
+  var title = document.title;
+  var url = window.location.href;
+  var shareUrl =
+    "https://www.facebook.com/?u=" +
+    encodeURIComponent(url) +
+    "&t=" +
+    encodeURIComponent(title);
+  window.open(
+    shareUrl,
+    "",
+    "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600"
+  );
+}
+
+function shareOnWhatsApp() {
+  var title = document.title;
+  var url = window.location.href;
+  var shareUrl = "https://wa.me/?text=" + encodeURIComponent(title + " " + url);
+  window.open(
+    shareUrl,
+    "",
+    "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600"
+  );
+}
+
+function shareOnPinterest() {
+  var title = document.title;
+  var url = window.location.href;
+  var shareUrl =
+    "https://www.pinterest.com/pin/create/button/?url=" +
+    encodeURIComponent(url) +
+    "&media=&description=" +
+    encodeURIComponent(title);
+  window.open(
+    shareUrl,
+    "",
+    "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600"
+  );
+}
+
+function shareOnLinkedIn() {
+  var title = document.title;
+  var url = window.location.href;
+  var shareUrl =
+    "https://www.linkedin.com/sharing/share-offsite/?url=" +
+    encodeURIComponent(url) +
+    "&title=" +
+    encodeURIComponent(title);
+  window.open(
+    shareUrl,
+    "",
+    "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600"
+  );
+}
+
+socialShareButtons.forEach(function (button) {
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+    var shareType = this.classList[0];
+    switch (shareType) {
+      case "facebook":
+        shareOnFacebook();
+        break;
+      case "whatsapp":
+        shareOnWhatsApp();
+        break;
+      case "pinterest":
+        shareOnPinterest();
+        break;
+      case "linkedin":
+        shareOnLinkedIn();
+        break;
+    }
+  });
+});
+
+  </script>
     <div class="site-wrap" id="home-section">
 
       <div class="site-mobile-menu site-navbar-target">
@@ -37,176 +208,157 @@
         <div class="site-mobile-menu-body"></div>
       </div>
 
+<section class="row align-items-center py-1 px-xl-2" >
+    
+<div class="row">
+    <div class="d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="index.html" style="text-decoration: none; color: inherit;">
+        <span class="badge rounded-pill bg-primary">Accupressure</span>
+        <span class="badge rounded-pill bg-secondary">Service</span>
+    </a>
 
-
-    <header class="site-navbar site-navbar-target" role="banner">
-  <div class="container">
-    <div class="row align-items-center position-relative">
-      <!-- Left Side: ACUP Logo -->
-      <div class="col-3">
-        <div class="site-logo">
-          <a href="index.html">ACUP</a>
+    <a href="https://www.google.com/maps?q=123+Street,+New+York,+USA" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-inline-flex align-items-center">
+            <i class="fas fa-location-dot"></i>
+            <div class="text-left ml-2">
+                <span class="badge bg-secondary">123 Street, Delhi</span>
+            </div>
         </div>
-      </div>
+    </a>
+</div>
+</div>
+<div class="row">
+    <div class="d-flex justify-content-between align-items-center">
+    <a href="mailto:service@water.com" style="text-decoration: none; color: inherit;">
+        <div class="d-inline-flex align-items-center">
+            <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+            <div class="text-left">
+                <span class="badge bg-danger">service@accupressure.com</span>
+            </div>
+        </div>
+    </a>
 
-      <!-- Right Side: Sidebar toggle and Contact button -->
-      <div class="col-9 text-right">
-        <!-- Sidebar toggle button (three-bar icon) -->
-        <span class="d-inline-block">
-          <a href="#" class="site-menu-toggle js-menu-toggle py-5">
-            <span class="icon-menu h3 text-white"></span>
-          </a>
-        </span>
-
-        <!-- Contact Button -->
-        <a href="#contact-section" class="appointment-btn scrollto">Contact</a>
-
-        <!-- Sidebar navigation -->
-        <nav id="sidebar" class="site-navigation text-right ml-auto sidebar">
-          <ul class="site-menu main-menu js-clone-nav ml-auto">
-            <li class="active"><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#why-us" class="nav-link">Why</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#video" class="nav-link">Video</a></li>
-            <li><a href="#faq" class="nav-link">FAQ</a></li>
-          </ul>
-          <!-- Close button inside the sidebar -->
-          <span class="close-sidebar icon-close h3 text-white"></span>
-        </nav>
-      </div>
+    <div class="d-inline-flex align-items-center">
+        <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+        <div class="text-left">
+            <span class="badge bg-success">+91 34578 67895</span>
+        </div>
     </div>
-  </div>
-</header>
-
-<style>
-/* Sidebar Hidden by Default */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -250px; /* Initially hidden off-screen */
-  width: 250px;
-  height: 100%;
-  background-color: #333;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: right 0.3s ease; /* Smooth slide-in */
-  z-index: 9999; /* Ensure the sidebar is on top */
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.sidebar.show {
-  right: 0; /* Slide-in when "show" class is added */
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 20px 0;
-}
-
-.sidebar ul li a {
-  color: #fff; /* Ensure text is visible on dark background */
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.close-sidebar {
-  font-size: 24px;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  display: block;
-}
-
-/* Ensure Sidebar Toggle is Visible and Interactive */
-.js-menu-toggle {
-  margin-right: 15px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.appointment-btn {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.appointment-btn:hover {
-  background-color: #218838;
-}
-
-/* Adjust z-index of the carousel section if necessary */
-.carousel, .carousel-item {
-  z-index: 1; /* Lower than sidebar */
-}
-
-/* Make sure layout is responsive */
-@media (min-width: 992px) {
-  .site-navigation {
-    display: block;
-  }
-}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const menuToggle = document.querySelector('.js-menu-toggle');
-  const closeSidebar = document.querySelector('.close-sidebar');
-  const sidebar = document.querySelector('.sidebar');
-
-  // Open sidebar on menu toggle click
-  menuToggle.addEventListener('click', function (e) {
-    e.preventDefault();
-    sidebar.classList.toggle('show'); // Toggle the "show" class
-  });
-
-  // Close sidebar on close button click
-  closeSidebar.addEventListener('click', function () {
-    sidebar.classList.remove('show');
-  });
-
-  // Close sidebar when a menu link is clicked
-  const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
-  sidebarLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      sidebar.classList.remove('show');
-    });
-  });
-});
-
-
-</script>
+</div>
+</div>
+</section>
+<section class="row align-items-center py-1 px-xl-2" >
+   
+<div class="row">
+    <div class="d-flex justify-content-center">
+    <a class="navbar-brand" href="index.html" style="text-decoration: none; color: inherit;">
+       <a class="nav-link" href="#home"> <span class="badge rounded-pill bg-primary">Home</span></a>  
+        <a class="nav-link" href="#about"> <span class="badge rounded-pill bg-secondary">About</span></a> 
+        <a class="nav-link" href="#why-us"> <span class="badge rounded-pill bg-success">Why</span></a>  
+        <a class="nav-link" href="#gallery"> <span class="badge rounded-pill bg-danger">Gallery</span></a> 
+        <a class="nav-link" href="#services"> <span class="badge rounded-pill bg-dark">Services</span></a>  
+        <a class="nav-link"  href="#contact-section"> <span class="badge rounded-pill bg-info">Contact</span></a> 
+    
+    </a>
+</div>
+<div class="d-flex justify-content-center">
+    <a class="navbar-brand" href="index.html" style="text-decoration: none; color: inherit;">
       
-   <div class="hero" style="background-image: url('images/hero_bg_1.jpg');">
-        
+        <a class="nav-link" href="#video"> <span class="badge rounded-pill bg-dark">Video</span></a>  
+        <a class="nav-link" href="#faq"> <span class="badge rounded-pill bg-warning">Faq</span></a> 
+    </a>
+</div>
+</div>
+
+</section>
+
+     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="hero" style="background-image: url('images/hero_bg_1.jpg'); background-size: cover; background-position: center;">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-lg-8 intro text-center">
-              <h1 class="text-white"><strong class="text-primary">Improve</strong> your overall health.</h1>
-                  <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem praesentium ad, repellendus consequatur ab ut fuga veritatis reiciendis. Vitae, possimus.</div>
+              <h1 class="text-white"><strong class="text-primary">Rediscover Balance </strong> Through Natural Healing.</h1>
+              <div class="desc text-white">Restore the body's natural balance by applying pressure to specific points. This non-invasive method stimulates the body’s self-healing abilities, providing relief from pain, stress, and tension</div>
+              <div class="col-lg-8 mx-auto">
+                <a href="https://vimeo.com/342333493" data-fancybox class="play-now mx-auto">
+                 
 
-                  <div class="col-lg-8 mx-auto">
-                    <a href="https://vimeo.com/342333493" data-fancybox class=" play-now mx-auto">
-                      <span class="icon">
-                        <span class="icon-play"></span>
-                      </span>
-                      <span class="caption text-white">Watch intro video</span>
-                    </a>
-                  </div>
 
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+<script>
+function showVideo() {
+    document.getElementById('videoModal').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+}
+
+function hideVideo() {
+    document.getElementById('videoModal').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('youtubeVideo').src = document.getElementById('youtubeVideo').src; // Reset the video
+}
+</script>
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="hero" style="background-image: url('https://m.media-amazon.com/images/I/41QJv+bqkEL.jpg'); background-size: cover; background-position: center;">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8 intro text-center">
+              <h1 class="text-white"><strong class="text-primary">Experience Relief </strong> Without Medication.</h1>
+              <div class="desc text-white">Acupressure offers a drug-free alternative that promotes relaxation and improves blood circulation.</div>
+              <div class="col-lg-8 mx-auto">
+                <a href="https://vimeo.com/342333494" data-fancybox class="play-now mx-auto">
+                 
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="hero" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibHGM9yLQZPjuAxapiH163-8DUDQO1cFoyCSze53jw6VoCJmmAzkDdCorvgDDbLYMwhhCGim27t_XvsJNYSflY2JtfsM3PTR-IOihI9kuQn9q4RPc1LYvDQpxg-dkQAdH6pe-J5RuLf4vZ3JadBLuK2zxkCqqUGWhsDM1sCl8A8VGlVUkPtaFCVyGDLIyF/s320/Capture.JPG'); background-size: cover; background-position: center;">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8 intro text-center">
+              <h1 class="text-white"><strong class="text-primary">Boost Your Energy </strong> and Wellness Naturally.</h1>
+              <div class="desc text-white">Acupressure not only relieves pain but also boosts energy levels and enhances overall well-being.</div>
+              <div class="col-lg-8 mx-auto">
+                <a href="https://vimeo.com/342333495" data-fancybox class="play-now mx-auto">
+                  
+                 
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Carousel Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 <div class="site-section"id="about">
       <div class="container">
         <div class="row">
@@ -1663,7 +1815,7 @@ a:hover {
         document.getElementById('yearSpan').textContent = `${currentYear}-${nextYear}`;
     </script>
    
-<div align="left"class="contact-info">  
+<div align="left"class="contact-info">	
 <button type="button" style="margin-left: 10px; class="btn btn-primary">
  <h5><span class="badge bg-primary">K</span> <span class="badge bg-secondary">W</span><span class="badge bg-danger">D</span><span class="badge bg-success">4.7</span>
 <span class="badge bg-info"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
